@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <nav>
+      <div style=" background-color:rgb(32,12,105);height=70px">
+        <h2>
+           Farhan
+        </h2>
+        
+      </div>
+    </nav>
+    <main>
+        <div class="main">
+            <div class="left">
+                <DIV class="leftdiv">
+                     <h1>Register Yourself For WEB DEVELOPMENT Courses</h1>
+                </DIV>
+            
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consectetur amet. Labore incidunt dolor praesentium, maxime quam repellat quos, eos quo quaerat itaque magnam sint minus eius delectus ducimus eligendi.
+                    </p>
+                </div>
+               <div  class="buttons leftdiv">
+                <button><a href='/login'>LOGIN</a></button>
+                <button onclick="dark()">DARK MODE</button>
+               </div>
+                
+            </div>
+            <div class="right">
+               <div class="form">
+                <form style="margin-top:10;"method= 'post' action="/signup">
+                  {% csrf_token %}
+                    <h1 class="formhead">REGISTER HERE</h1>
+                    <INPut placeholder="UserName" type="text" name="username"></INPut>
+                    <INPUt  placeholder='Email' type="email"></INPUt>
+                    <INPut placeholder="password" type="password" name="password"></INPut>
+                    <INPut placeholder=" confirm password" type="password" name="cpassword"></INPut>
+                    <button class="SUBMIT"> SUBMIT
+                    </button>
+                </form>
+               </div>
+            </div>
+        </div>
+      <div class="three">
+         
+      </div>
+      
+    </main>
+    <script >
+        var i= 0;
+       function dark (){
+    
+        if(i==0){
+           document.querySelector(".main").style.backgroundColor='white';
+           document.querySelector("h1").style.color='black';
+           document.querySelector("p").style.color='black';
+          document.querySelector(".formhead").style.color='black';
+           i=1;
+
+        }else{
+            document.querySelector(".main").style.backgroundColor='black';
+            document.querySelector("h1").style.color='white';
+            document.querySelector("p").style.color='white';
+          document.querySelector(".formhead").style.color='white';
+
+            i=0;
+        }
+
+       }
+    </script>
+</body>
+</html>
